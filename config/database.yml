@@ -1,0 +1,24 @@
+default: &default
+  adapter: postgresql
+  encoding: unicode
+  pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
+  timeout: 5000
+
+development:
+  <<: *default
+  database: hm_api_development
+  host: localhost
+  username: blinded93
+  password: test123
+test:
+  <<: *default
+  database: hm_api_test
+  host: localhost
+  username: blinded93
+  password: test123
+
+production:
+  <<: *default
+  database: hm_api_production
+  username: hm_api
+  password: <%= ENV['HM_API_DATABASE_PASSWORD'] %>

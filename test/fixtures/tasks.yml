@@ -1,0 +1,17 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  due_date: 2019-11-29
+  completed?: false
+  frequency: MyString
+  recurring?: false
+  list: one
+
+two:
+  name: MyString
+  due_date: 2019-11-29
+  completed?: false
+  frequency: MyString
+  recurring?: false
+  list: two
