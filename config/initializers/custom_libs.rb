@@ -1,1 +1,1 @@
-require 'identifier'
+require 'login_identifier'
