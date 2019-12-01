@@ -5,7 +5,7 @@ class AuthenticationController < ApplicationController
 	end
 
 	def authenticate_user
-		identifier = Identifier.parse(params[:identifier])
+		identifier = LoginIdentifier.parse(params[:identifier])
 		user = User.find_by(identifier)
 
 		if !!user && user.authenticate(params[:password])
