@@ -16,7 +16,6 @@ ActiveRecord::Schema.define(version: 2019_11_30_031428) do
   enable_extension "plpgsql"
 
   create_table "addresses", force: :cascade do |t|
-    t.string "name"
     t.string "address1"
     t.string "address2"
     t.string "city"
@@ -66,6 +65,7 @@ ActiveRecord::Schema.define(version: 2019_11_30_031428) do
   end
 
   create_table "properties", force: :cascade do |t|
+    t.string "name"
     t.bigint "user_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
